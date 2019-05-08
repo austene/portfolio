@@ -16,7 +16,13 @@ app.set('view engine', 'ejs');
 
 //res.render instead of res.send to send the out of the template by filename.
 app.get('/', (req, res) => {
-  res.render('index');
+  const data = {
+    person: {
+      firstName: 'Austen',
+      lastName: 'Eames',
+    }
+  }
+  res.render('index', data);
 });
 
 app.listen(8080, () => {
