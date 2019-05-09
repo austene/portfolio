@@ -14,7 +14,6 @@ const MAILCHIMP_LIST_ID = process.env.MAILCHIMP_LIST_ID
 const MAILCHIMP_API_KEY = process.env.MAILCHIMP_API_KEY
 
 //defines route to use custom router
-
 app.use(morgan('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
