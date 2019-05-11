@@ -59,26 +59,27 @@ describe('server.js', function() {
         });
     });
 
-    it('responds to POST request to /thanks', (done) => {
-      chai
-        .request(server)
-        .post('/thanks')
-        .end((err, res) => {
-            expect(err).not.exist;
-            expect(res).to.have.status(200);
-            done();
-        });
-    });
+    // it('responds to POST request to /thanks', (done) => {
+    //   chai
+    //     .request(server)
+    //     .post('/thanks')
+    //     .end((err, res) => {
+    //         expect(err).not.exist;
+    //         expect(res).to.have.status(200);
+    //         done();
+    //     });
+    // });
 
-    it('thanks responds with html', (done) => {
-        chai
-          .request(server)
-          .post('/thanks')
-          .end((err, res) => {
-              expect(err).not.exist;
-              expect(res).to.be.html;
-              done();
-          });
-    });
+    // it('thanks responds with html', (done) => {
+    //     chai
+    //       .request(server)
+    //       .post('/thanks')
+    //       .end((err, res) => {
+    //           expect(err).not.exist;
+    //           expect(res).to.be.html;
+    //           // expect(document.querySelector('h1')).to.have.text('Thank you');
+    //           done();
+    //       });
+    // });
 
 });

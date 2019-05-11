@@ -61,6 +61,7 @@ app.post('/thanks', (req, res) => {
                 lastName: req.body.lastName,
               }
             }
+            console.log(`responsestatus is ${response.status}`);
             if (response.status < 300 || (response.status === 400 && response.body.title === "Member Exists")) {
               res.render('thanks', contactData);
             } else {
