@@ -19,6 +19,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use('/profile', profile)
 app.use(express.static('views'));
+app.use('/static', express.static('public'));
 
 //Set up views directory to be ./views
 app.set('views', './views');
@@ -72,3 +73,5 @@ app.post('/thanks', (req, res) => {
 app.listen(8080, () => {
   console.log(`listening at http://localhost:${port}`)
 });
+
+module.exports = app;

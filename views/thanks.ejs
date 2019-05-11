@@ -1,10 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html lang='en'>
+
   <head>
-    <title>Austen Thanks You</title>
+    <% include ./parts/head.ejs %>
   </head>
-  <body>
+  <body id='page-top'>
+
     <div>
-      Thank you <%= contact.firstName %> <%= contact.lastName %>!
+      <% include ./parts/navigation.ejs %>
     </div>
-  </body>
+    <!-- Thanks -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">Thank you <%= contact.firstName %> <%= contact.lastName %>!</h1>
+      </div>
+    </div>
+  </header>
+  <footer>
+      <% include ./parts/footer.ejs %>
+  </footer>
 </html>
